@@ -1,0 +1,70 @@
+body
+{
+  background-image: url("images/Drums.jpg");
+}
+
+
+.header
+{
+  font-size: 3rem;
+  color: orange;
+  text-align: center;
+}
+.buttons
+{
+  text-align: center;
+}
+
+.button
+{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 10px solid grey;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 20px;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: fantasy;
+  font-style: italic;
+  text-shadow: 3px 0 #DBEDF3;
+  color: #DA0463;
+}
+
+.w
+{
+  background-image: url("images/crash.png");
+  background-size: cover;
+}
+.a
+{
+  background-image: url("images/kick.png");
+  background-size: cover;
+}
+.s
+{
+  background-image: url("images/snare.png");
+  background-size: cover;
+}
+
+.d
+{
+  background-image: url("images/tom1.png");
+  background-size: cover;
+}
+.f
+{
+  background-image: url("images/tom2.png");
+  background-size: cover;
+}
+.g
+{
+  background-image: url("images/tom3.png");
+  background-size: cover;
+}
+.h
+{
+  background-image: url("images/tom4.png");
+  background-size: cover;
+}
