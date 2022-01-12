@@ -6,30 +6,27 @@ document.querySelectorAll(".button")[i].addEventListener("click",function ()
 {
   var innerhtml = this.innerHTML;
   makesound(innerhtml);
+  makeanimation(innerhtml);
+  
 })
 i++;
 }
+
+// page animation using gsap (javascript libaries)
 const tl = gsap.timeline({defaults:{duration:0.5}})
 tl.fromTo(".header-1",{opacity:0},{opacity:1,duration:1})
 tl.fromTo(".button-1",{y:200,opacity:0},{y:0,opacity:1,duration:1})
 tl.fromTo(".button-2",{y:-200,opacity:0},{y:0,opacity:1,duration:1},"<")
 
-// var i = 0;
-// while(i < 7)
-// {
-// document.querySelectorAll("button")[i].addEventListener("click",function ()
-//  {
-//    tl.fromTo("button",{y:20},{y:0,duration:1,ease:"back.out(1.4)"})
-// })
-// i++;
-// }
+
 //for detecting keyboard presses
 document.addEventListener("keypress",function(event)
 {
   makesound(event.key);
+  makeanimation(event.key);
 })
 
-
+// for making sounds
 function makesound(keyvalue)
 {
   switch(keyvalue) {
@@ -62,4 +59,15 @@ function makesound(keyvalue)
        sound7.play();
        break;
   }
+}
+
+// for button animation
+function makeanimation(currentkey)
+{
+  var animatekey = document.querySelector("." + currentkey);
+  animatekey.classList.add("press");
+  setTimeout(function()
+{
+  animatekey.classList.remove("press");
+},200)
 }
