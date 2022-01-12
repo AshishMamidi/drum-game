@@ -71,3 +71,8 @@ body
   background-image: url("images/tom4.png");
   background-size: cover;
 }
+.press
+{
+  box-shadow: 5px 5px black;
+  opacity : 0.8;
+}
